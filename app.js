@@ -68,7 +68,7 @@ function amountCoveredCalc(claimant, percentage){
 	totalPayedOut += amountCovered;
 	// JQuery appending
 	$(document).ready(function(){
-		$("ul").append($('<li>').text("Paid out $" + amountCovered + " for " + name + "."));
+		$("ul").append($('<li>').text("Paid out $" + amountCovered + " for " + name + ".")).addClass('amountCovered');
 	});
 	console.log("Paid out $" + amountCovered + " for " + name + ".");
 }
@@ -80,9 +80,9 @@ function claimsProcessor(claimants){
 		percentage = percentCoveredCalc(claimants[i]);
 		amountCoveredCalc(claimants[i], percentage);
 	}
-// more JQuery
+	// more JQuery
 	$(document).ready(function(){
-		$("footer").append("We have payed out $" + totalPayedOut + " this year.");
+		$("footer").append("We have payed out $" + totalPayedOut + " this year.").addClass('totalPay');
 	});
 	console.log("We have payed out $" + totalPayedOut + " this year.");
 }

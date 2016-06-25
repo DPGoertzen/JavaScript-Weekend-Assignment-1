@@ -1,0 +1,28 @@
+
+
+body{
+  background-image: url('optumbuild.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #66ccff;
+}
+img{
+  display: block;
+  width: 30%;
+  margin: 0 auto 0 auto;
+}
+.amountCovered {
+  color: Red;
+  font-style: bold;
+  font-size: 18px;
+  width: 322px;
+  margin: 0 auto 0 auto;
+  font-family: tahoma;
+}
+.totalPay{
+  color: BurlyWood;
+  font-size: 24px;
+  text-align: center;
+  font-family: impact;
+  text-transform: uppercase;
+}
