@@ -66,6 +66,10 @@ function amountCoveredCalc(claimant, percentage){
 	var initialCost = claimant.visitCost;
 	var amountCovered = Math.round((initialCost * percentage) / 100);
 	totalPayedOut += amountCovered;
+	// JQuery appending
+	$(document).ready(function(){
+		$("ul").append($('<li>').text("Paid out $" + amountCovered + " for " + name + "."));
+	});
 	console.log("Paid out $" + amountCovered + " for " + name + ".");
 }
 
@@ -76,6 +80,10 @@ function claimsProcessor(claimants){
 		percentage = percentCoveredCalc(claimants[i]);
 		amountCoveredCalc(claimants[i], percentage);
 	}
+// more JQuery
+	$(document).ready(function(){
+		$("footer").append("We have payed out $" + totalPayedOut + " this year.");
+	});
 	console.log("We have payed out $" + totalPayedOut + " this year.");
 }
 
